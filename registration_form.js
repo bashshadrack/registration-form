@@ -14,7 +14,7 @@ const validation =()=>{
             alert('password Required and must of length 7 to 12');
         
         }
-
+//in this code i use regular expression or "regex" to validate the input and will only allow Alphabates 
         const username = document.getElementById('name');
         const alphabates = /^[A-Za-z]+$/;
         if(username.value.match(alphabates)){
@@ -23,8 +23,37 @@ const validation =()=>{
         else{
             alert('required and only alphabates');
         }
-
+// this code instructs not to leave the select value as "choose a country" 
+        const usercountry= document.getElementById('country');
+        if(usercountry.value =='Choose a Country'){
+            alert('Required and must choose a country');
         
+        }
+
+        else{
+            return true;
+        }
+        
+//in this code i use regex to validate the input that only allows numeric.
+        const zipcode = document.getElementById('zip');
+        const numeric = /^[1-9]+$/;
+            if(zipcode.value.match(numeric)){
+                 return true;
+            }
+            else{
+                    alert('required and only numeric');
+                }
+
+ //in this code i use regex to validate the email input that only allows email.
+        const useremail = document.getElementById('email');
+        const email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(useremail.value.match(email)){
+                 return true;
+            }
+            else{
+                    alert('required and and put valid email');
+                }
+
 
         
 }
